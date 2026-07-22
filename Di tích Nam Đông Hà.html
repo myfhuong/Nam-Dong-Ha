@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Di tích Lịch sử Văn hóa Phường Nam Đông Hà</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .tab-active { border-bottom-color: #059669; color: #059669; font-weight: 700; }
+        .tab-inactive { border-bottom-color: transparent; color: #6b7280; }
+        .description-content.collapsed { max-height: 280px; overflow: hidden; position: relative; }
+        .description-content.collapsed::after {
+            content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+            background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.95)); 
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <div class="max-w-lg mx-auto bg-white min-h-screen shadow-xl rounded-none sm:rounded-2xl overflow-hidden flex flex-col justify-between">
+        
+        <main class="flex-grow">
+            <!-- Hero Image / Ảnh bìa Đông Hà -->
+            <div class="relative bg-gray-900 h-64 overflow-hidden">
+                <img src="https://sf-static.upanhlaylink.com/img/image_202607153d41d3eb8d85469571f25c79ef711de7.jpg" 
+                     alt="Di tích lịch sử Đông Hà" 
+                     class="w-full h-full object-cover opacity-85">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent"></div>
+                
+                <!-- Lớp nổi góc trái ảnh bìa: UBND Phường Nam Đông Hà -->
+                <div class="absolute top-4 left-4 z-20 flex items-center bg-white/90 backdrop-blur-sm pl-1.5 pr-3 py-1 rounded-full shadow-lg border border-white/40">
+                    <img src="https://sf-static.upanhlaylink.com/img/image_20260715f6e0cf92ec60a1e8f2eec991ceb92a04.jpg" 
+                         alt="Logo UBND Phường Nam Đông Hà" 
+                         class="h-6 w-6 rounded-full object-cover shadow-sm">
+                    <span class="text-[8px] sm:text-[9px] font-bold text-emerald-800 uppercase tracking-wider ml-1.5 font-sans">UBND Phường Nam Đông Hà</span>
+                </div>
+
+                <div class="absolute bottom-4 left-4 right-4 text-left">
+                    <span class="bg-amber-500 text-gray-900 text-[10px] font-extrabold px-2.5 py-1 rounded-full uppercase tracking-widest">Quảng Trị</span>
+                    <h1 class="text-xl sm:text-2xl font-black text-white uppercase mt-2 drop-shadow-md">
+                        Di tích Lịch sử Văn hóa Nam Đông Hà
+                    </h1>
+                </div>
+            </div>
+
+            <!-- Quick Info -->
+            <section class="p-4 bg-emerald-50 border-y border-emerald-100 flex items-center justify-between text-sm">
+                <div class="flex items-center space-x-2 text-left">
+                    <svg class="w-5 h-5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    </svg>
+                    <p class="text-gray-700 font-medium leading-tight">Phường Nam Đông Hà, thành phố Đông Hà, tỉnh Quảng Trị</p>
+                </div>
+                <a href="https://maps.app.goo.gl/Wxip1PZv8pGBQK2r9?entry=ttu&g_ep=EgoyMDI2MDcxMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" 
+                   class="bg-emerald-600 text-white font-bold text-xs px-3 py-1.5 rounded-lg flex items-center space-x-1 hover:bg-emerald-700 transition-colors uppercase shrink-0">
+                    <span>Chỉ đường</span>
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                    </svg>
+                </a>
+            </section>
+
+            <!-- Detailed Intro Content -->
+            <section class="p-4 sm:p-6 bg-white">
+                <div class="mb-4">
+                    <h2 class="text-lg font-bold text-gray-800 border-l-4 border-emerald-500 pl-3 uppercase tracking-wide">
+                        Giới thiệu Di tích Lịch sử, Văn hoá
+                    </h2>
+                    <div class="h-px bg-gray-200 w-full mt-2"></div>
+                </div>
+
+                <div id="description-container" class="text-gray-700 text-sm leading-relaxed space-y-4 text-justify">
+                    <p>Di tích lịch sử, văn hoá là tài sản vô giá trong kho tàng di sản lâu đời của dân tộc Việt Nam. Trong mọi giai đoạn của lịch sử phát triển, di tích lịch sử, văn hoá là một thành tố quanới quan trọng trong sinh thái văn hoá của một địa phương, vùng, miền, đất nước. Di tích lịch sử, văn hoá là chất kết dính, là mạch nối bền chặt đối với các thế hệ, thúc đẩy sự phát triển của xã hội.</p>
+                    
+                    <p>Lịch sử trải qua hàng ngàn năm của dân tộc Việt Nam đã chứng minh một cách thuyết phục rằng di tích lịch sử, văn hoá luôn là bản thông điệp giàu sức chuyển tải của các thế hệ, có giá trị thẩm mỹ cao, có sức giải toả lớn, đóng góp tích cực vào sự nghiệp xây dựng, phát triển trí tuệ, tài năng, bản sắc nhân văn của từng cá nhân và cả cộng đồng, mỗi khu vực và của cả đất nước.</p>
+                    
+                    <p>Trong kho tàng di sản văn hoá vật chất và tinh thần mà con người Đông Hà đã làm nên và còn lại đến nay thì di tích lịch sử văn hoá là nơi chứa đựng các giá trị truyền thống tốt đẹp, được biểu hiện bằng sự phong phú, đa dạng về loại hình và tiềm ẩn trong lòng nó một diễn trình lịch sử, văn hoá của một vùng đất qua nhiều thời đại. Bên cạnh những dấu ấn của thời cổ, trung, cận đại, lịch sử đã để lại trên vùng đất Đông Hà một số lượng không ít những di tích phản ánh cuộc đấu tranh oanh liệt chống giặc ngoại xâm thời hiện đại mà đỉnh cao là hai cuộc kháng chiến chống Pháp và Mỹ.</p>
+                    
+                    <p>Từ những năm sau chiến tranh, các cấp chính quyền và nhân dân trên địa bàn Đông Hà đã tiến hành các hoạt động bảo vệ di tích, di vật và tổ chức hình thành các Bảo tàng, nhà truyền thống. Các công trình đình chùa, miếu mạo bị hư hại trong chiến tranh đã bắt đầu được nhân dân trong các làng xã huy động tiền của đóng góp để tái tạo lại; các công trình mang dấu ấn thời thuộc Pháp đã được bảo vệ (như: Lô cốt Đông Hà - một thời trở thành biểu trưng của Đông Hà/ Quảng Trị); những di tích mang dấu ấn chiến tranh đã được gìn giữ cùng nhiều di vật là minh chứng lịch sử bi hùng một thời (Nhà Vòm sân bay, các xe tăng ở Lô cốt...); nhiều nhà truyền thống phường xã đã được xây dựng với nhiều hiện vật lịch sử có giá trị phản ánh cuộc đấu tranh giải phóng của quân và dân Đông Hà trong hai cuộc kháng chiến.</p>
+                    
+                    <p>Trên toàn địa bàn phường Nam Đông Hà đã có <strong>9 di tích được nhà nước công nhận</strong>; trong đó có <strong>01 di tích được công nhận cấp quốc gia đặc biệt: Cảng Quân sự Đông Hà</strong>; và 8 di tích đã được công nhận cấp tỉnh trên địa bàn, có 2 di tích thuộc loại hình văn hoá nghệ thuật (gồm: Đình Làng Lập Thạch, Đình làng Điếu Ngao) và 6 di tích thuộc loại hình lịch sử (cách mạng).</p>
+                </div>
+                
+                <button id="toggle-description-btn" class="text-emerald-600 font-bold text-xs mt-3 hover:text-emerald-700 flex items-center uppercase tracking-wider">
+                    <span>... Xem đầy đủ nội dung</span>
+                </button>
+            </section>
+
+            <section class="p-4 sm:p-6 bg-gray-50 border-t border-gray-100">
+                <div class="mb-5">
+                    <h2 class="text-lg font-bold text-gray-800 border-l-4 border-amber-500 pl-3 uppercase tracking-wide">
+                        Danh sách di tích Nam Đông Hà (09 Điểm)
+                    </h2>
+                    <p class="text-xs text-gray-500 mt-1">Sắp xếp theo thứ tự cấp xếp hạng & loại hình di tích</p>
+                </div>
+
+                <!-- Tìm kiếm và Bộ lọc nhanh theo Tag xếp hạng -->
+                <div class="space-y-3 mb-5">
+                    <input type="text" id="relic-search" placeholder="Tìm kiếm di tích..." 
+                           class="w-full px-4 py-2 text-sm border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-white shadow-sm transition-all">
+                    
+                    <!-- Các nút Tab lọc thẻ phân loại -->
+                    <div class="flex flex-wrap gap-1.5 pt-1">
+                        <button onclick="filterRelicsByTag('Tất cả')" class="relic-tag-btn active-tag bg-emerald-600 text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase transition-all">Tất cả</button>
+                        <button onclick="filterRelicsByTag('Quốc gia đặc biệt')" class="relic-tag-btn bg-white text-gray-600 border border-gray-200 text-[11px] font-medium px-3 py-1 rounded-full uppercase transition-all hover:bg-emerald-50">Quốc gia đặc biệt</button>
+                        <button onclick="filterRelicsByTag('Cách mạng')" class="relic-tag-btn bg-white text-gray-600 border border-gray-200 text-[11px] font-medium px-3 py-1 rounded-full uppercase transition-all hover:bg-emerald-50">Cách mạng</button>
+                        <button onclick="filterRelicsByTag('Lịch sử')" class="relic-tag-btn bg-white text-gray-600 border border-gray-200 text-[11px] font-medium px-3 py-1 rounded-full uppercase transition-all hover:bg-emerald-50">Lịch sử</button>
+                        <button onclick="filterRelicsByTag('Nghệ thuật')" class="relic-tag-btn bg-white text-gray-600 border border-gray-200 text-[11px] font-medium px-3 py-1 rounded-full uppercase transition-all hover:bg-emerald-50">Nghệ thuật</button>
+                    </div>
+                </div>
+
+                <!-- Container danh sách di tích mở rộng dạng Accordion -->
+                <div id="relics-list-container" class="space-y-3">
+                    <!-- Javascript nạp danh sách 9 điểm di tích ở đây -->
+                </div>
+            </section>
+
+            <!-- Relic Value section -->
+            <section class="p-4 sm:p-6 bg-white border-t border-gray-100 text-justify text-sm">
+                <div class="mb-4 text-left">
+                    <h2 class="text-lg font-bold text-gray-800 border-l-4 border-emerald-500 pl-3 uppercase tracking-wide">
+                        Giá trị di tích
+                    </h2>
+                    <div class="h-px bg-gray-200 w-full mt-2"></div>
+                </div>
+                <div id="value-container" class="space-y-4 text-gray-700 leading-relaxed text-justify">
+                    <p>Là vùng đất từng trải qua sự khốc liệt của chiến tranh, khắp nơi trên địa bàn Đông Hà dường như đều trở thành các địa điểm di tích phản ánh sinh động hiện thực cuộc chiến đấu bi hùng của quân và dân Đông Hà/ Quảng Trị và của cả nước.</p>
+                    
+                    <p>Nhiều ngôi đình, nhà thờ họ, nhà ở dân gian trong các làng xã đã trở thành nơi ghi dấu sự ra đời của các tổ chức Chi bộ Đảng Cộng sản; thành nơi họp kín, hội nghị của Đảng uỷ, Huyện uỷ, Uỷ ban kháng chiến; thành các cơ sở nuôi giấu cán bộ cách mạng, nơi ra đời của các đội tự vệ vũ trang, nơi hội họp của quần chúng...</p>
+                    
+                    <p>Nhiều địa điểm trong các làng xóm đã thành chứng nhân của những vụ chém giết, đốt phá của kẻ thù thực dân, đế quốc đối với dân lành và những người cách mạng; nhưng cũng chính những nơi này đã là các địa chỉ đỏ ghi nhận sự vùng lên quật khởi của lực lượng quần chúng cách mạng đấu tranh với kẻ thù để giữ vững khí tiết, giữ vững phong trào và góp phần không nhỏ vào thắng lợi chung của cuộc chiến tranh giải phóng. Và đặc biệt là nhiều địa điểm trên vùng đất Đông Hà đã thành di tích ghi dấu ấn quân sự về các căn cứ đồn bốt; thành di tích ghi dấu những chiến công oanh liệt của các lực lượng dân quân du kích, bộ đội địa phương, bộ đội chủ lực trong hàng chục, hàng trăm trận chiến đấu lớn, nhỏ với kẻ thù...</p>
+
+                    <p>Nhiều năm qua, ý thức được tầm quan trọng của di tích, ngành Văn hoá, Thông tin, chính quyền địa phương các cấp và nhân dân ở tỉnh Quảng Trị và khu vực Đông Hà nói riêng đã có nhiều nỗ lực cố gắng trong công tác nghiên cứu, điều tra, bảo vệ, tu bổ, tôn tạo và phát huy giá trị các di tích lịch sử, văn hoá.</p>
+                </div>
+                
+                <button id="toggle-value-btn" class="text-emerald-600 font-bold text-xs mt-3 hover:text-emerald-700 flex items-center uppercase tracking-wider">
+                    <span>... Xem đầy đủ nội dung</span>
+                </button>
+            </section>
+
+            <section class="p-4 sm:p-6 bg-gray-50 border-t border-gray-200 text-left">
+                <h2 class="text-lg font-bold text-gray-800 border-l-4 border-amber-500 pl-3 uppercase tracking-wide mb-4">
+                    Thư viện đa phương tiện
+                </h2>
+                
+                <div class="border-b border-gray-200">
+                    <nav class="flex -mb-px space-x-6 text-left">
+                        <button id="photo-tab" class="py-3 px-1 border-b-2 tab-active text-sm flex items-center space-x-2" onclick="switchMediaTab('photo')">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            <span>Thư viện Ảnh</span>
+                        </button>
+                        <button id="video-tab" class="py-3 px-1 border-b-2 tab-inactive text-sm flex items-center space-x-2" onclick="switchMediaTab('video')">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                            <span>Video & Phóng sự</span>
+                        </button>
+                    </nav>
+                </div>
+
+                <!-- Thư viện ảnh chia theo nhóm -->
+                <div id="photo-content" class="mt-6 space-y-6">
+                    <div class="flex space-x-2 overflow-x-auto pb-2">
+                        <button onclick="filterPhotos('all')" class="category-btn bg-emerald-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shrink-0 shadow-sm uppercase tracking-tight">Tất cả</button>
+                        <button onclick="filterPhotos('Quốc gia đặc biệt')" class="category-btn bg-white text-gray-600 text-xs font-medium px-3 py-1.5 rounded-full border shrink-0 hover:bg-emerald-50 hover:text-emerald-700 transition-all uppercase tracking-tight">Quốc gia đặc biệt</button>
+                        <button onclick="filterPhotos('Lịch sử')" class="category-btn bg-white text-gray-600 text-xs font-medium px-3 py-1.5 rounded-full border shrink-0 hover:bg-emerald-50 hover:text-emerald-700 transition-all uppercase tracking-tight">Lịch sử</button>
+                        <button onclick="filterPhotos('Kiến trúc')" class="category-btn bg-white text-gray-600 text-xs font-medium px-3 py-1.5 rounded-full border shrink-0 hover:bg-emerald-50 hover:text-emerald-700 transition-all uppercase tracking-tight">Kiến trúc</button>
+                    </div>
+
+                    <div id="photo-grid" class="grid grid-cols-2 gap-3">
+                        <!-- Dynamic Photos load here -->
+                    </div>
+                </div>
+
+                <!-- THAY ĐỔI: Khắc phục lỗi video "Error 153" bằng Premium Video Thumbnail Card -->
+                <div id="video-content" class="mt-6 hidden space-y-4 text-justify">
+                    <div class="bg-white p-4 rounded-xl border shadow-sm space-y-3">
+                        <h4 class="font-bold text-gray-800 text-sm uppercase">Đông Hà - Mảnh đất và con người</h4>
+                        <p class="text-xs text-gray-500 leading-relaxed">Phim phóng sự giới thiệu về lịch sử, di sản văn hóa, tinh thần đấu tranh kiên cường và sức vươn dậy mạnh mẽ của thành phố Đông Hà anh hùng.</p>
+                        
+                        <!-- Video Card thay thế Iframe bị lỗi cấu hình 153 -->
+                        <div class="relative aspect-video w-full rounded-xl overflow-hidden shadow-md border border-gray-200 group bg-gray-950">
+                            <!-- Nạp ảnh bìa phóng sự trực tiếp từ YouTube -->
+                            <img src="https://img.youtube.com/vi/52BY3IEgz2U/maxresdefault.jpg" 
+                                 class="w-full h-full object-cover opacity-90 transition-transform duration-500 group-hover:scale-105" 
+                                 alt="Đông Hà - Mảnh đất và con người"
+                                 onerror="this.src='https://placehold.co/640x360/0a2e1d/ffffff?text=Dong+Ha+-+Manh+Dat+Va+Con+Nguoi'">
+                                 
+                            <!-- Lớp phủ màu mờ và Nút phát động sóng -->
+                            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors flex flex-col items-center justify-center p-4">
+                                <a href="https://youtu.be/52BY3IEgz2U?si=yFprs61revxug3oH" target="_blank" 
+                                   class="w-16 h-16 md:w-20 md:h-20 bg-emerald-600/90 hover:bg-emerald-500 text-white rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 transform group-hover:scale-110 hover:ring-8 hover:ring-emerald-500/20 active:scale-95">
+                                    <svg class="w-8 h-8 md:w-10 md:h-10 fill-current translate-x-0.5" viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                </a>
+                                
+                                <span class="text-white font-extrabold text-xs sm:text-sm mt-4 tracking-wide drop-shadow uppercase text-center">BẤM ĐỂ PHÁT PHÓNG SỰ</span>
+                                <span class="text-gray-300 text-[10px] sm:text-xs mt-1 text-center font-medium opacity-90">
+                            </div>
+                        </div>
+                        
+                        <a href="https://youtu.be/52BY3IEgz2U?si=yFprs61revxug3oH" target="_blank" 
+                           class="block text-center text-xs font-bold text-emerald-600 uppercase hover:underline pt-2 tracking-widest">
+                            Xem trực tiếp trên YouTube
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer hành chính chính thức -->
+        <footer class="py-5 px-4 bg-gray-900 text-gray-300 text-center border-t border-gray-800 text-xs">
+            <div class="flex flex-col items-center">
+                <!-- Logo UBND Phường Nam Đông Hà -->
+                <div class="w-14 h-14 bg-white rounded-full mb-2 flex items-center justify-center border-2 border-emerald-500 shadow-md p-1 overflow-hidden">
+                    <img src="https://sf-static.upanhlaylink.com/img/image_20260715f6e0cf92ec60a1e8f2eec991ceb92a04.jpg" alt="Logo UBND Phường Nam Đông Hà" class="w-full h-full object-cover rounded-full">
+                </div>
+                
+                <div class="space-y-0.5 text-center w-full max-w-sm mb-4">
+                    <p class="text-[10px] text-gray-500 uppercase tracking-widest font-bold">Thông tin được cung cấp và bảo chứng:</p>
+                    <p class="text-sm sm:text-base font-extrabold text-white uppercase tracking-tight">UBND Phường Nam Đông Hà</p>
+                    <p class="text-gray-400 font-medium leading-tight text-[11px]">
+                        Địa chỉ: Số 100 đường Lý Thường Kiệt, phường Nam Đông Hà, tỉnh Quảng Trị
+                    </p>
+                </div>
+
+                <!-- Logo & Thương hiệu Xác Thực Số (Kích thước bằng 1/2 so với UBND Phường) -->
+                <div class="pt-3 border-t border-gray-800/80 w-full flex flex-col items-center">
+                    <div class="w-8 h-8 bg-white rounded-full mb-1.5 flex items-center justify-center border border-emerald-500/80 shadow-sm p-1 overflow-hidden">
+                        <img src="https://sf-static.upanhlaylink.com/img/image_202511073d7c9b98a956c9cb4e17b2d1ef77b03a.jpg" alt="Logo Xác Thực Số" class="w-full h-full object-contain">
+                    </div>
+                    
+                    <div class="space-y-0.5 text-center w-full max-w-xs mb-1">
+                        <p class="text-xs font-bold text-emerald-400 uppercase tracking-tight">XÁC THỰC SỐ</p>
+                        <p class="text-gray-400 text-[10px] font-normal leading-tight">
+                            Nền tảng Thông tin Di sản Văn hóa
+                        </p>
+                    </div>
+
+                    <p class="text-[9px] text-gray-500 uppercase tracking-widest pt-1">
+                        &copy; 2026 Bản quyền thuộc về XÁC THỰC SỐ
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Modal Lightbox cho Thư viện ảnh -->
+    <div id="image-modal" class="fixed inset-0 z-50 hidden bg-black bg-opacity-95 flex flex-col items-center justify-center p-4 transition-all duration-300" onclick="closeModal()">
+        <div class="absolute top-4 right-4 text-white text-3xl font-bold p-2 cursor-pointer bg-black/50 rounded-full w-12 h-12 flex items-center justify-center hover:bg-white hover:text-black transition-colors" onclick="closeModal()">&times;</div>
+        <div class="max-w-4xl w-full flex items-center justify-center relative" onclick="event.stopPropagation()">
+            <button onclick="prevImage()" id="prev-btn" class="absolute left-0 z-10 p-3 bg-white/10 rounded-full text-white hover:bg-white hover:text-black transition-all -ml-2 md:-ml-16">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-8 h-8"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12 15.75 4.5" /></svg>
+            </button>
+            <img id="modal-image" src="" class="max-w-full max-h-[70vh] object-contain rounded-lg shadow-2xl transition-opacity duration-300 border border-white/10" alt="Ảnh phóng to">
+            <button onclick="nextImage()" id="next-btn" class="absolute right-0 z-10 p-3 bg-white/10 rounded-full text-white hover:bg-white hover:text-black transition-all -mr-2 md:-mr-16">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-8 h-8"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5 15.75 12 8.25 19.5" /></svg>
+            </button>
+        </div>
+        <div class="w-full max-w-2xl text-white text-center mt-6 bg-black/70 p-4 rounded-xl border border-white border-opacity-10 backdrop-blur-md">
+            <h4 id="group-title" class="text-lg font-bold text-emerald-400 uppercase tracking-tighter"></h4>
+            <div id="image-counter" class="text-[10px] mt-4 font-bold text-gray-500 px-3 py-1 bg-white bg-opacity-10 rounded-full inline-block tracking-widest text-center"></div>
+        </div>
+    </div>
+
+    <script>
+        // Sắp xếp thứ tự ưu tiên: 
+        // 1. Di tích Quốc gia Đặc biệt
+        // 2. Di tích Cách mạng cấp Tỉnh
+        // 3. Di tích Lịch sử/Lưu niệm cấp Tỉnh
+        // 4. Di tích Nghệ thuật cấp Tỉnh
+        const relicsData = [
+            {
+                id: 1,
+                title: "Cảng Quân sự Đông Hà",
+                rank: "Di tích Lịch sử CẤP QUỐC GIA ĐẶC BIỆT",
+                tag: "Quốc gia đặc biệt",
+                rankColor: "bg-red-100 text-red-800 border-red-200",
+                coords: "Google Maps Link",
+                mapUrl: "https://maps.app.goo.gl/rjYpQSerMhcWKXJd7",
+                desc: "Quân viễn chinh Mỹ xây dựng năm 1967. Trong cuộc chiến đấu cam go, ác liệt của quân và dân Đông Hà. Cầu và cảng luôn là mục tiêu của các cuộc tiến công đánh phá của bộ đội chủ lực và du kích. Đầu năm 1973, cảng giữ vai trò trung chuyển hàng hoá, vũ khí và trở thành một trong những nơi tập kết, giao nhận hàng của tuyến đường Hồ Chí Minh trên biển, trước khi vận chuyển vào phía Nam.Cảng đã góp phần quan trọng vào sự nghiệp giải phóng dân tộc, thống nhất đất nước.",
+                img: "https://sf-static.upanhlaylink.com/img/image_20260715ac3b740a2446e9c0134ef5cd31c042dd.jpg",
+                detailInfo: {
+                    location: "Bờ Nam sông Hiếu, cạnh quốc lộ 1A và cầu Ðông Hà trên địa phận làng Ðiếu Ngao thuộc Phường 2, thành phố Ðông Hà (cũ). Nay là Tổ dân phố Điếu Ngao, phường Nam Đông Hà, tỉnh Quảng Trị",
+                    decision: "Quyết định số 2383/QĐ-TTg ngày 09/12/2013",
+                    area: "Tổng diện tích khoanh vùng bảo vệ: 1,552 ha (KV1: 0,615 ha, KV2: 0,908 ha)",
+                    notes: [
+                        "Di tích thành phần thuộc di tích “Đường Trường Sơn - Đường Hồ Chí Minh”.",
+                        "Đã được Thủ tướng Chính phủ ban hành Quyết định số 404/QĐ-TTg ngày 25/02/2025 về phê duyệt Quy hoạch bảo quản, tu bổ, phục hồi Di tích quốc gia đặc biệt Cảng quân sự Đông Hà, tỉnh Quảng Trị."
+                    ]
+                }
+            },
+            {
+                id: 2,
+                title: "Đình Làng Lập Thạch",
+                rank: "Di tích Lịch sử - Văn hóa CẤP TỈNH",
+                tag: "Lịch sử",
+                rankColor: "bg-blue-100 text-blue-800 border-blue-200",
+                coords: "Google Maps Link",
+                mapUrl: "https://maps.app.goo.gl/Ksm6uqCnnve4sx8V7",
+                desc: "Nguyên ủy của đình là công trình kiến trúc tương đối quy mô, bề thế, xây dựng cuối thế kỷ XVIII. Khuôn viên có tam quan và tường thành, bên trong có tòa đình 5 gian 2 chái, theo chiều ngang. Trong đình tất cả các cấu kiện gỗ, chạm trổ công phu. Mái lợp ngói liệt, diềm nóc được trang trí nghệ thuật đắp vữa và ghép mảnh sành. Có 2 miếu thờ: Thành hoàng và miếu Bổn thổ. Được bao quanh bởi tam quan và hệ thống tường thành bằng gạch kín 3 phía. Tam quan cấu trúc theo 3 tầng: Tầng dưới là 3 cổng vòm cuốn mở 3 lối rộng vào sân, trên 3 cổng là 3 gác vọng lâu.Ngoài giá trị về kiến trúc nghệ thuật, đình làng Lập Thạch còn được ghi nhận là một di tích lịch sử cách mạng của Ðảng bộ và Nhân dân thị xã Ðông Hà. Tháng 3/1930, dưới sự chỉ đạo trực tiếp của Ban vận động thành lập Ðảng, tại đình Lập Thạch, Chi bộ Ðảng Lập Thạch đã ra đời do đồng chí Nguyễn Thuấn làm Bí thư. Ðây là một trong những chi bộ ra đời sớm ở Ðông Hà và Cam Lộ. Nhờ đó, các tổ chức Ðảng xã Triệu Lễ, thị xã Ðông Hà dần dần được mở rộng và phát triển. Tháng 12/1931, Ðảng viên của chi bộ Lập Thạch đã có 8 đồng chí.",
+                img: "https://sf-static.upanhlaylink.com/img/image_202607151e32effbb3aba7b88fd6a94c9c90b32b.jpg",
+                detailInfo: {
+                    location: "Nằm ở xóm trên làng Lập Thạch, phường Đông Lễ, thành phố Đông Hà (cũ); bên bờ Bắc sông Thạch Hãn. Nay là Tổ dân phố Lập Thạch phường Nam Đông Hà, tỉnh Quảng Trị",
+                    decision: "Quyết định số 2508/QĐ-UBND ngày 23/12/2008",
+                    area: "Khuôn viên bao quanh bởi tam quan và tường thành bằng gạch kín 3 phía",
+                    notes: [
+                        "Đình có quy mô bề thế 5 gian 2 chái, cấu kiện chạm trổ công phu, mái lợp ngói liệt cổ kính và trang trí nghệ thuật ghép sành độc đáo.",
+                        "Tam quan đình được xây dựng 3 tầng lộng lẫy: Tầng dưới là 3 cổng vòm cuốn mở lối vào sân, phía trên là 3 gác vọng lâu.",
+                        "Tháng 3/1930, tại đình Lập Thạch, Chi bộ Đảng Lập Thạch đã ra đời (do đ/c Nguyễn Thuấn làm Bí thư), đánh dấu một trong những chi bộ Đảng ra đời sớm nhất ở Đông Hà và Cam Lộ."
+                    ]
+                }
+            },
+            {
+                id: 3,
+                title: "Địa điểm nhà ông Nguyễn Khuyến",
+                rank: "Di tích Lịch sử CẤP TỈNH",
+                tag: "Lịch sử",
+                rankColor: "bg-blue-100 text-blue-800 border-blue-200",
+                coords: "Google Maps Link",
+                mapUrl: "https://maps.app.goo.gl/jJGhYK8Z6p6ibnBB8",
+                desc: "Giai đoạn 1939 - 1942, tại nhà ông Nguyễn Khuyến - một đảng viên trung kiên của xã Triệu Lương, là nơi vẫn bí mật nuôi dấu, che chở các đồng chí đảng viên của Xứ ủy Trung kỳ lui tới hoạt động. Tại đây, cơ quan Xứ ủy Trung kỳ đã bí mật làm việc và chỉ đạo phong trào cách mạng trên toàn miền chờ cơ hội để củng cố và phát triển phong trào đấu tranh trong giai đoạn mới. Nhờ sự đùm bọc che chở của cơ sở cách mạng và quần chúng nhân dân, Xứ ủy Trung Kỳ vẫn tồn tại, lãnh đạo nhân dân tiến hành thắng lợi cao trào tổng khởi nghĩa giành chính quyền tháng 8/1945.",
+                img: "https://sf-static.upanhlaylink.com/img/image_20260715e3b5f5b0d0e6208850d818ae482763c4.jpg",
+                detailInfo: {
+                    location: "Nằm về phía Tây bắc thôn Tân Vĩnh (cạnh bờ sông Vĩnh Phước), phường Ðông Lương, thành phố Ðông Hà (cũ); cách quốc lộ 1A khoảng 5km về phía Tây. Nay là Tổ dân phố Tân Vĩnh, phường Nam Đông Hà, tỉnh Quảng Trị.",
+                    decision: "Quyết định số 707/QĐ-UBND ngày 12/7/1996",
+                    area: "Diện tích theo GCNQSDĐ: 420m² (Tổng diện tích khoanh vùng bảo vệ: 411m²; KVI: 293m², KVII: 118m²)",
+                    notes: [
+                        "Nơi cơ quan Xứ ủy Trung kỳ bí mật làm việc, chỉ đạo phong trào cách mạng toàn miền giai đoạn 1939 - 1942.",
+                        "Gắn liền với tấm gương hy sinh, lòng trung kiên của đảng viên Nguyễn Khuyến và sự đùm bọc của nhân dân thôn Tân Vĩnh.",
+                        "Cơ sở quan trọng giúp duy trì, bảo vệ lực lượng nòng cốt lãnh đạo Cách mạng Tháng Tám năm 1945 thành công."
+                    ]
+                }
+            },
+            {
+                id: 4,
+                title: "Cầu Lai Phước",
+                rank: "Di tích Lịch sử CẤP TỈNH",
+                tag: "Lịch sử",
+                rankColor: "bg-blue-100 text-blue-800 border-blue-200",
+                coords: "Google Maps Link",
+                mapUrl: "https://maps.app.goo.gl/Dxz6fivEXic7T5GG8",
+                desc: "5 giờ 15 phút ngày 28/4/1972, để ngăn chặn đường rút lui của địch và sự chi viện của chúng cho chi khu quân sự Ðông Hà, Bộ Tư lệnh mặt trận quyết định nhanh chóng đánh sập cầu Lai Phước.Sau hơn 4 giờ chiến đấu, tiểu đoàn 9, trung đoàn 102, sư đoàn 308 đã làm chủ trận địa, đánh sập cầu, tiêu diệt được 43 tên (2 sĩ quan), bắn rơi 3 máy bay, bắn cháy 3 xe tăng…Chiến thắng này đã cắt đứt tuyến phòng thủ Ðông Hà - Ái Tử - La Vang, cô lập toàn bộ quân địch trong cụm cứ điểm Ðông Hà, tạo điều kiện giải phóng thị xã Ðông Hà; uy hiếp thị xã Quảng Trị.",
+                img: "https://sf-static.upanhlaylink.com/img/image_202607158e3dcb9fc5856cfea3eb9cd090a9d70e.jpg",
+                detailInfo: {
+                    location: "Nằm trên quốc lộ 1A, bắc qua sông Vĩnh Phước, là ranh giới giữa thành phố Đông Hà và huyện Triệu Phong (cũ); cách trung tâm thành phố Đông Hà khoảng 3km về phía Nam. Nay là Tổ dân phố Tân Phước, phường Nam Đông Hà, tỉnh Quảng Trị.",
+                    decision: "Quyết định số 707/QĐ-UBND ngày 12/7/1996",
+                    area: "Kết cấu cầu bắc qua sông Vĩnh Phước (ranh giới hành chính)",
+                    notes: [
+                        "Trận đánh bẻ gãy tuyến phòng thủ Đông Hà - Ái Tử - La Vang của địch, cô lập toàn bộ quân địch trong cụm cứ điểm Đông Hà.",
+                        "Tiêu diệt 43 tên địch (có 2 sĩ quan), bắn rơi 3 máy bay và bắn cháy 3 xe tăng trong ngày 28/4/1972."
+                    ]
+                }
+            },
+            {
+                id: 5,
+                title: "Nhà thờ họ Hoàng",
+                rank: "Di tích Lịch sử CẤP TỈNH",
+                tag: "Lịch sử",
+                rankColor: "bg-blue-100 text-blue-800 border-blue-200",
+                coords: "Google Maps Link",
+                mapUrl: "https://maps.app.goo.gl/EMEzrN211b89e5yh9",
+                desc: "Tháng 8/1945 lực lượng Công nông tự vệ đỏ của phường được thành lập; tích cực luyện tập, đúc rèn vũ khí, chuẩn bị cho cuộc nổi dậy, phối hợp với các địa phương khác khởi nghĩa giành chính quyền. Ngày 24/8/1945, Nhân dân tập trung tại đây để tiếp thu kế hoạch khởi nghĩa. Ngày 25 họ kéo ra nhập đoàn biểu tình, tham gia cuộc mít tin tuyên bố thành lập chính quyền cách mạng ở thị xã. Năm 1952, dưới sự chỉ đạo của Thị ủy Ðông Hà phối hợp với đơn vị chủ lực tổ chức cuộc mít tin quần chúng, tuyên truyền đường lối kháng chiến, phát động phong trào \"diệt tề, trừ gian\".",
+                img: "https://sf-static.upanhlaylink.com/img/image_20260715ff7303337f7ecc4081bd191e23db2801.jpg",
+                detailInfo: {
+                    location: "Nằm trong địa phận làng Ðiếu Ngao, đường Nguyễn Thượng Hiền, Khu phố 1, Phường 2, thành phố Ðông Hà (cũ); cách quốc lộ 1A khoảng 500m về phía Ðông. Nay là Tổ dân phố Điếu Ngao, phường Nam Đông Hà, tỉnh Quảng Trị.",
+                    decision: "Quyết định số 707/QĐ-UBND ngày 12/7/1996",
+                    area: "Tổng diện tích khoanh vùng bảo vệ: 1170m² (Khu vực I: 559m², Khu vực II: 611m²)",
+                    notes: [
+                        "Lực lượng Công nông tự vệ đỏ của phường được thành lập tại đây vào tháng 8/1945.",
+                        "Là nơi tập trung tiếp thu kế hoạch khởi nghĩa giành chính quyền ngày 24/8/1945."
+                    ]
+                }
+            },
+            {
+                id: 6,
+                title: "Nhà Vòm sân bay",
+                rank: "Di tích Lịch sử CẤP TỈNH",
+                tag: "Lịch sử",
+                rankColor: "bg-blue-100 text-blue-800 border-blue-200",
+                coords: "Google Maps Link",
+                mapUrl: "https://maps.app.goo.gl/nN4jbB4TFfHvwbEg9",
+                desc: "Ngày 08/4/1972, Bộ Tư lệnh ra lệnh cho các đơn vị pháo binh bắn mãnh liệt vào cụm cứ điểm Ðông Hà; trung đoàn 36, trung đoàn 27, sư đoàn 390, sư đoàn 308… tấn công từ nhiều hướng. Sau 20 ngày chiến đấu quyết liệt, phá tan lần lượt các cứ điểm phòng thủ vành đai, đúng 5 giờ 15 phút ngày 28/4/1972, cuộc tiến công quy mô, toàn diện vào cụm cứ điểm Ðông Hà bắt đầu. Sau nhiều trận công kích và chiến đấu quyết liệt quân giải phóng đã chiếm được khu sân bay và toàn bộ cụm cứ điểm Ðông Hà, đây là nơi quân giải phóng cắm cờ chiến thắng đầu tiên",
+                img: "https://sf-static.upanhlaylink.com/img/image_202607152cc4d49bccdc71ef513e4fb6916e564f.jpg",
+                detailInfo: {
+                    location: "Đường Hàm Nghi, Khu phố 5, Phường 5, thành phố Đông Hà (cũ). Nay là Tổ dân phố 4 phường Nam Đông Hà, tỉnh Quảng Trị",
+                    decision: "Quyết định số 707/QĐ-UBND ngày 12/7/1996",
+                    area: "Diện tích theo GCNQSDĐ: 492m²",
+                    notes: [
+                        "Nơi quân giải phóng cắm lá cờ chiến thắng đầu tiên sau khi đánh chiếm khu sân bay Đông Hà năm 1972.",
+                        "Minh chứng cho giai đoạn chiến đấu oai hùng, đập tan cứ điểm phòng ngự kiên cố của địch."
+                    ]
+                }
+            },
+            {
+                id: 7,
+                title: "Địa điểm lưu niệm Chợ Hôm và Nhà thờ họ Nguyễn Khắc",
+                rank: "Di tích Lịch sử CẤP TỈNH",
+                tag: "Lịch sử",
+                rankColor: "bg-blue-100 text-blue-800 border-blue-200",
+                coords: "Bản đồ chi tiết riêng",
+                mapUrl: "https://maps.app.goo.gl/kzHASKLXsSvCrMeD6",
+                desc: "Vào những năm 1930 - 1931, tại Ðông Hà, hai phường Ðông Lễ và Ðông Lương là nơi có các Chi bộ Ðảng hoạt động tích cực và phong trào đấu tranh cách mạng của quần chúng khá phát triển. Với sự giúp đỡ của Nguyễn Hanh và Chi bộ Lập Thạch, tại đây đồng chí Nguyễn Nhuệ - Ủy viên Xứ ủy Trung kỳ đã thường xuyên gặp gỡ các đồng chí trong Ban Chấp hành Ðảng bộ tỉnh Quảng Trị. Để trao đổi công tác và bám sát địa bàn hoạt động; đồng thời tìm những vị trí an toàn trên địa bàn để Tỉnh ủy tổ chức các cuộc Hội nghị trong những năm 1930 - 1931. Từ năm 1928, tại chợ Hôm, tổ chức Tân Lập thương cuộc đã được thành lập bao gồm các hạt nhân của hội là: Nguyễn Chuẩn, Nguyễn Phùng, Nguyễn Kháng, Nguyễn Tân, Nguyễn Hanh, Nguyễn Tố…Tổ chức Tân Lập thương cuộc có nhiệm vụ làm cơ sở kinh doanh để xây dựng và phát triển tài chính, làm liên lạc để phát triển hội viên, tuyên truyền chủ nghĩa Mác - Lê nin. Tổ chức này đã có tác dụng tích cực trong đời sống chính trị, kinh tế, xã hội ở địa phương; dấy lên một phong trào yêu nước chống Pháp, làm tiền đề cho sự ra đời của các tổ chức Cộng sản",
+                img: "https://sf-static.upanhlaylink.com/img/image_2026071582898fcfd2e527a72dd0941e16a80139.jpg",
+                detailInfo: {
+                    location: "Nằm bên bờ sông Thạch Hãn, thuộc làng Lập Thạch, Đường Trần Thánh Tông, phường Ðông Lễ, thành phố Ðông Hà (cũ); cách trung tâm khoảng 1,5km về phía Ðông Nam. Nay là Tổ dân phố Đông Lễ, phường Nam Đông Hà, tỉnh Quảng Trị",
+                    decision: "Quyết định số 3209/QĐ-UBND ngày 05/11/2019",
+                    area: "Diện tích theo GCNQSDĐ: 170m²",
+                    notes: [
+                        "Đồng chí Nguyễn Nhuệ - Ủy viên Xứ ủy Trung kỳ thường xuyên liên lạc, chỉ đạo Ban Chấp hành Đảng bộ Quảng Trị tổ chức hội nghị tại đây.",
+                        "Tổ chức Tân Lập thương cuộc (1928) đóng vai trò làm cơ sở gây dựng tài chính, liên lạc phát triển hội viên và tuyên truyền chủ nghĩa Mác - Lênin chống Pháp."
+                    ],
+                    doubleSites: true,
+                    site1Name: "Nhà thờ họ Nguyễn Khắc",
+                    site1Img: "https://sf-static.upanhlaylink.com/img/image_2026071582898fcfd2e527a72dd0941e16a80139.jpg",
+                    site1Map: "https://maps.app.goo.gl/kzHASKLXsSvCrMeD6",
+                    site2Name: "Địa điểm lưu niệm Chợ Hôm",
+                    site2Img: "https://sf-static.upanhlaylink.com/img/image_20260715104b37d149f3670c42f36c9b8a9acd0f.jpg",
+                    site2Map: "https://maps.app.goo.gl/K5oyGce1jg3so4jd8"
+                }
+            },
+            {
+                id: 8,
+                title: "Đình Làng Trung Chỉ",
+                rank: "Di tích Kiến trúc Nghệ thuật CẤP TỈNH",
+                tag: "Nghệ thuật",
+                rankColor: "bg-purple-100 text-purple-800 border-purple-200",
+                coords: "Google Maps Link",
+                mapUrl: "https://maps.app.goo.gl/8kqrZYpWLwLn4Bv38",
+                desc: "Kiến trúc đình thuộc vào thời nhà Nguyễn (đầu TK XIX) với nghệ thuật trang trí bằng gỗ, nổi bật là hoa lá, tứ linh…thể hiện được sự thịnh vượng của nhà Nguyễn đã thu phục được lòng dân. Là nơi thờ Thành Hoàng và các vị có công sáng lập ra làng; tổ chức các ngày tế lễ, hội họp của dân làng; lễ trao phần thưởng cho con em học giỏi, đỗ đạt cao; lễ đón nhận làng văn hóa. Tồn tại hơn 300 năm, ngôi đình vẫn còn nguyên vẹn bộ khung gỗ với nhiều họa tiết trang trí dày đặc, nhất là hệ thống cột, kèo, cù, con bạo… chứa nhiều giá trị nghệ thuật điêu khắc.",
+                img: "https://sf-static.upanhlaylink.com/img/image_202607154c9ef0f871d8b2c938ee6f2b562ef4bf.jpg",
+                detailInfo: {
+                    location: "Nằm ở mé tây rìa làng Trung Chỉ, phường Đông Lương, thành phố Đông Hà (cũ). Nay là Tổ dân phố Đông Lương, phường Nam Đông Hà, tỉnh Quảng Trị",
+                    decision: "Quyết định số 2370/QĐ-UBND ngày 12/12/2008",
+                    area: "Diện tích khuôn viên bảo vệ theo quy hoạch khoanh vùng di tích tỉnh",
+                    notes: [
+                        "Là nơi thờ Thành Hoàng và các vị có công sáng lập ra làng.",
+                        "Bộ khung gỗ cấu kiện độc đáo với nhiều họa tiết chạm khắc hoa văn, thể hiện nghệ thuật chạm khắc cuối Nguyễn tinh xảo.",
+                        "Nơi hội họp tế lễ, lễ trao phần thưởng học tập và tổ chức các lễ văn hóa của làng."
+                    ]
+                }
+            },
+            {
+                id: 9,
+                title: "Đình làng Điếu Ngao",
+                rank: "Di tích Kiến trúc Nghệ thuật CẤP TỈNH",
+                tag: "Nghệ thuật",
+                rankColor: "bg-purple-100 text-purple-800 border-purple-200",
+                coords: "Google Maps Link",
+                mapUrl: "https://maps.app.goo.gl/Ka9nk9rUEcvr4w4a9",
+                desc: "Ðây là nơi thờ thần linh và những người có công với làng nước. Bên trong đình có một bức hoành phi khắc 3 chữ Hán lớn:\" Ðiếu Ðài Cao\" và một câu đối được làm vào mùa Ðông năm Tân Tỵ (1931). Năm 1930 - 1931 là địa điểm liên lạc của các cán bộ Cộng sản đầu tiên Ðông Hà. Ngày 23/8/1945, Nhân dân đã tập trung về đây chuẩn bị cướp chính quyền và kéo về thị xã Quảng Trị để dự mít tinh. Với những bề dày văn hóa, lịch sử của một làng cổ ở vùng đất Quảng Trị và qua hai cuộc kháng chiến trường kỳ của dân tộc ta, đình là niềm tự hào của các thế hệ con cháu trên quê hương.",
+                img: "https://sf-static.upanhlaylink.com/img/image_202607151df4b81d243d084ea90619b3ef5ebf4c.jpg",
+                detailInfo: {
+                    location: "Nằm trong địa phận làng Ðiếu Ngao, đường Đặng Dung, Khu phố 2 Phường 2, thành phố Đông Hà (cũ). Nay là Tổ dân phố Điếu Ngao, phường Nam Đông Hà, tỉnh Quảng Trị",
+                    decision: "Quyết định số 2187/2004/QĐ - UBND ngày 16/7/2004",
+                    area: "Diện tích khuôn viên bảo vệ theo bản vẽ quy hoạch khoanh vùng di tích tỉnh",
+                    notes: [
+                        "Bên trong đình lưu giữ bức hoành phi sơn son thếp vàng lớn khắc 3 chữ Hán: \"Ðiếu Ðài Cao\".",
+                        "Năm 1930 - 1931 là điểm hẹn, liên lạc bí mật phục vụ hoạt động của thế hệ cán bộ Đảng đầu tiên tại Đông Hà.",
+                        "Ngày 23/8/1945, Nhân dân địa phương tụ hội tại sân đình chỉnh đốn lực lượng chuẩn bị tổng khởi nghĩa cướp chính quyền."
+                    ]
+                }
+            }
+        ];
+
+        // Dữ liệu hình ảnh thư viện
+        const photoGallery = [
+            { name: "Cảng Quân sự Đông Hà", group: "Quốc gia đặc biệt", url: "https://sf-static.upanhlaylink.com/img/image_20260715ac3b740a2446e9c0134ef5cd31c042dd.jpg" },
+            { name: "Nhà thờ họ Hoàng", group: "Lịch sử", url: "https://sf-static.upanhlaylink.com/img/image_20260715ff7303337f7ecc4081bd191e23db2801.jpg" },
+            { name: "Đình làng Điếu Ngao", group: "Kiến trúc", url: "https://sf-static.upanhlaylink.com/img/image_202607151df4b81d243d084ea90619b3ef5ebf4c.jpg" },
+            { name: "Nhà Vòm sân bay", group: "Lịch sử", url: "https://sf-static.upanhlaylink.com/img/image_202607152cc4d49bccdc71ef513e4fb6916e564f.jpg" },
+            { name: "Nhà thờ họ Nguyễn Khắc", group: "Lịch sử", url: "https://sf-static.upanhlaylink.com/img/image_2026071582898fcfd2e527a72dd0941e16a80139.jpg" },
+            { name: "Địa điểm lưu niệm Chợ Hôm", group: "Lịch sử", url: "https://sf-static.upanhlaylink.com/img/image_20260715104b37d149f3670c42f36c9b8a9acd0f.jpg" },
+            { name: "Đình Làng Lập Thạch", group: "Kiến trúc", url: "https://sf-static.upanhlaylink.com/img/image_202607151e32effbb3aba7b88fd6a94c9c90b32b.jpg" },
+            { name: "Cầu Lai Phước", group: "Lịch sử", url: "https://sf-static.upanhlaylink.com/img/image_202607158e3dcb9fc5856cfea3eb9cd090a9d70e.jpg" },
+            { name: "Đình làng Trung Chỉ", group: "Kiến trúc", url: "https://sf-static.upanhlaylink.com/img/image_202607154c9ef0f871d8b2c938ee6f2b562ef4bf.jpg" },
+            { name: "Địa điểm nhà ông Nguyễn Khuyến", group: "Lịch sử", url: "https://sf-static.upanhlaylink.com/img/image_20260715e3b5f5b0d0e6208850d818ae482763c4.jpg" }
+        ];
+
+        let currentActiveRelic = null;
+        let activeRelicTag = 'Tất cả';
+        let activePhotoGroup = 'all';
+
+        function renderRelics(filterText = "") {
+            const container = document.getElementById('relics-list-container');
+            container.innerHTML = "";
+
+            const filtered = relicsData.filter(relic => {
+                const matchesSearch = relic.title.toLowerCase().includes(filterText.toLowerCase()) || relic.desc.toLowerCase().includes(filterText.toLowerCase());
+                const matchesTag = activeRelicTag === 'Tất cả' || relic.tag === activeRelicTag;
+                return matchesSearch && matchesTag;
+            });
+
+            if (filtered.length === 0) {
+                container.innerHTML = `<div class="p-8 text-center text-gray-400 text-sm">Không tìm thấy di tích phù hợp</div>`;
+                return;
+            }
+
+            filtered.forEach(relic => {
+                const isExpanded = currentActiveRelic === relic.id;
+                const item = document.createElement('div');
+                item.className = `bg-white rounded-2xl border transition-all shadow-sm ${isExpanded ? 'border-emerald-500 ring-1 ring-emerald-500/20' : 'border-gray-100 hover:border-gray-300'}`;
+                
+                let detailedHTML = "";
+                let doubleSitesHTML = "";
+                if (relic.detailInfo) {
+                    if (relic.detailInfo.doubleSites) {
+                        doubleSitesHTML = `
+                            <div class="mt-4 space-y-3 pt-4 border-t border-dashed border-gray-200">
+                                <p class="font-bold text-gray-900 text-[11px] uppercase text-left tracking-wider">Bao gồm 02 địa danh thành phần:</p>
+                                <div class="grid grid-cols-2 gap-3">
+                                    <div class="bg-gray-50 p-2.5 rounded-xl border border-gray-100 space-y-2 text-left flex flex-col justify-between">
+                                        <div>
+                                            <img src="${relic.detailInfo.site1Img}" class="w-full h-20 object-cover rounded-lg shadow-sm" alt="${relic.detailInfo.site1Name}">
+                                            <p class="font-bold text-[10px] text-gray-800 leading-snug mt-1.5 h-7 overflow-hidden">${relic.detailInfo.site1Name}</p>
+                                        </div>
+                                        <a href="${relic.detailInfo.site1Map}" target="_blank" class="block bg-emerald-600 text-white text-[10px] text-center font-bold py-1.5 rounded-lg uppercase tracking-wider hover:bg-emerald-700 transition-colors mt-1">Chỉ đường</a>
+                                    </div>
+                                    <div class="bg-gray-50 p-2.5 rounded-xl border border-gray-100 space-y-2 text-left flex flex-col justify-between">
+                                        <div>
+                                            <img src="${relic.detailInfo.site2Img}" class="w-full h-20 object-cover rounded-lg shadow-sm" alt="${relic.detailInfo.site2Name}">
+                                            <p class="font-bold text-[10px] text-gray-800 leading-snug mt-1.5 h-7 overflow-hidden">${relic.detailInfo.site2Name}</p>
+                                        </div>
+                                        <a href="${relic.detailInfo.site2Map}" target="_blank" class="block bg-emerald-600 text-white text-[10px] text-center font-bold py-1.5 rounded-lg uppercase tracking-wider hover:bg-emerald-700 transition-colors mt-1">Chỉ đường</a>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                    }
+                    detailedHTML = `
+                        <div class="mt-3 space-y-2 border-t border-dashed border-gray-200 pt-3 text-left">
+                            <p class="text-gray-700 leading-tight"><strong>Địa điểm:</strong> <span class="text-gray-600 text-xs">${relic.detailInfo.location}</span></p>
+                            <p class="text-gray-700 leading-tight"><strong>Quyết định xếp hạng:</strong> <span class="text-emerald-700 font-medium text-xs">${relic.detailInfo.decision}</span></p>
+                            <p class="text-gray-700 leading-tight"><strong>Diện tích bảo vệ:</strong> <span class="text-gray-600 text-xs">${relic.detailInfo.area}</span></p>
+                            <div class="bg-amber-50 p-2.5 rounded-lg border border-amber-200 mt-2 text-[11px] text-amber-900 space-y-1">
+                                <p class="font-bold text-amber-950 uppercase tracking-wide">Ghi chú & Sự kiện nổi bật:</p>
+                                <ul class="list-disc pl-4 space-y-1 text-justify">
+                                    ${relic.detailInfo.notes.map(note => `<li>${note}</li>`).join('')}
+                                </ul>
+                            </div>
+                            ${doubleSitesHTML}
+                        </div>
+                    `;
+                }
+
+                item.innerHTML = `
+                    <div class="p-4 flex items-center justify-between cursor-pointer" onclick="toggleRelic(${relic.id})">
+                        <div class="text-left pr-4">
+                            <span class="inline-block text-[9px] font-extrabold px-2 py-0.5 rounded-full border mb-1.5 ${relic.rankColor}">
+                                ${relic.rank}
+                            </span>
+                            <h3 class="text-sm font-bold text-gray-900 leading-snug">${relic.id}. ${relic.title}</h3>
+                        </div>
+                        <span class="text-gray-400 transition-transform duration-300 ${isExpanded ? 'rotate-180 text-emerald-600' : ''}">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+                        </span>
+                    </div>
+                    
+                    <div class="transition-all duration-300 overflow-hidden ${isExpanded ? 'max-h-[1200px] border-t border-gray-100' : 'max-h-0'}">
+                        <div class="p-4 space-y-3 text-justify text-xs">
+                            ${!relic.detailInfo || !relic.detailInfo.doubleSites ? `
+                            <div class="w-full h-40 rounded-xl overflow-hidden bg-gray-200 shadow-sm">
+                                <img src="${relic.img}" class="w-full h-full object-cover" alt="${relic.title}">
+                            </div>
+                            ` : ''}
+                            <p class="text-gray-600 leading-relaxed">${relic.desc}</p>
+                            
+                            ${detailedHTML}
+                            
+                            <!-- Nút chỉ đường đồng nhất mở Google Maps -->
+                            ${!relic.detailInfo || !relic.detailInfo.doubleSites ? `
+                            <div class="pt-2 flex justify-end">
+                                <a href="${relic.mapUrl}" target="_blank" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs px-4 py-2 rounded-xl flex items-center justify-center space-x-1.5 shadow-sm transition-colors uppercase tracking-wider">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                                    <span>Chỉ đường</span>
+                                </a>
+                            </div>
+                            ` : ''}
+                        </div>
+                    </div>
+                `;
+                container.appendChild(item);
+            });
+        }
+
+        // Điều khiển chọn lọc nhanh theo Tag di tích
+        function filterRelicsByTag(tag) {
+            activeRelicTag = tag;
+            const buttons = document.querySelectorAll('.relic-tag-btn');
+            buttons.forEach(btn => {
+                if (btn.textContent.trim().toUpperCase() === tag.toUpperCase()) {
+                    btn.className = "relic-tag-btn active-tag bg-emerald-600 text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase transition-all shadow-sm";
+                } else {
+                    btn.className = "relic-tag-btn bg-white text-gray-600 border border-gray-200 text-[11px] font-medium px-3 py-1 rounded-full uppercase transition-all hover:bg-emerald-50";
+                }
+            });
+            renderRelics(document.getElementById('relic-search').value);
+        }
+
+        function toggleRelic(id) {
+            currentActiveRelic = currentActiveRelic === id ? null : id;
+            renderRelics(document.getElementById('relic-search').value);
+        }
+
+        function renderGallery() {
+            const grid = document.getElementById('photo-grid');
+            grid.innerHTML = "";
+
+            const filtered = photoGallery.filter(photo => activePhotoGroup === 'all' || photo.group === activePhotoGroup);
+
+            filtered.forEach((photo, idx) => {
+                const item = document.createElement('div');
+                item.className = "group relative rounded-xl overflow-hidden shadow-sm border border-gray-100 cursor-pointer aspect-video bg-gray-100";
+                item.onclick = () => openModal(idx, filtered);
+                
+                item.innerHTML = `
+                    <img src="${photo.url}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="${photo.name}">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent flex flex-col justify-end p-2 text-left">
+                        <span class="bg-emerald-600 text-white text-[8px] font-bold px-1.5 py-0.5 rounded-full uppercase self-start mb-1 tracking-tight">${photo.group}</span>
+                        <h4 class="text-[10px] sm:text-xs font-bold text-white truncate drop-shadow">${photo.name}</h4>
+                    </div>
+                `;
+                grid.appendChild(item);
+            });
+        }
+
+        function filterPhotos(group) {
+            activePhotoGroup = group;
+            const btns = document.querySelectorAll('.category-btn');
+            btns.forEach(btn => {
+                const matches = btn.getAttribute('onclick').includes(`'${group}'`);
+                if (matches) {
+                    btn.className = "category-btn bg-emerald-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shrink-0 shadow-sm uppercase tracking-tight";
+                } else {
+                    btn.className = "category-btn bg-white text-gray-600 text-xs font-medium px-3 py-1.5 rounded-full border shrink-0 hover:bg-emerald-50 hover:text-emerald-700 transition-all uppercase tracking-tight";
+                }
+            });
+            renderGallery();
+        }
+
+        // Lightbox Modal Logic
+        let modalPhotos = [];
+        let modalIdx = 0;
+
+        function openModal(idx, list) {
+            modalPhotos = list;
+            modalIdx = idx;
+            updateModal();
+            document.getElementById('image-modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('image-modal').classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        function updateModal() {
+            const img = document.getElementById('modal-image');
+            const photo = modalPhotos[modalIdx];
+            img.src = photo.url;
+            document.getElementById('group-title').textContent = photo.name;
+            document.getElementById('image-counter').textContent = `${modalIdx + 1} / ${modalPhotos.length}`;
+            const showNav = modalPhotos.length > 1;
+            document.getElementById('prev-btn').style.display = showNav ? 'block' : 'none';
+            document.getElementById('next-btn').style.display = showNav ? 'block' : 'none';
+        }
+
+        function nextImage() {
+            modalIdx = (modalIdx + 1) % modalPhotos.length;
+            updateModal();
+        }
+
+        function prevImage() {
+            modalIdx = (modalIdx - 1 + modalPhotos.length) % modalPhotos.length;
+            updateModal();
+        }
+
+        // Chuyển đổi qua lại giữa Tab Ảnh và Tab Phóng sự
+        function switchMediaTab(tab) {
+            const pt = document.getElementById('photo-tab'), vt = document.getElementById('video-tab');
+            const pc = document.getElementById('photo-content'), vc = document.getElementById('video-content');
+            if(tab === 'photo') {
+                pt.className = 'py-3 px-1 border-b-2 tab-active text-sm flex items-center space-x-2'; 
+                vt.className = 'py-3 px-1 border-b-2 tab-inactive text-sm flex items-center space-x-2';
+                pc.classList.remove('hidden'); vc.classList.add('hidden');
+            } else {
+                vt.className = 'py-3 px-1 border-b-2 tab-active text-sm flex items-center space-x-2'; 
+                pt.className = 'py-3 px-1 border-b-2 tab-inactive text-sm flex items-center space-x-2';
+                vc.classList.remove('hidden'); pc.classList.add('hidden');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderRelics();
+            renderGallery();
+
+            document.getElementById('relic-search').addEventListener('input', (e) => {
+                renderRelics(e.target.value);
+            });
+
+            // Co dãn mượt mà nội dung phần tự giới thiệu
+            const container = document.getElementById('description-container'), toggleBtn = document.getElementById('toggle-description-btn');
+            container.classList.add('description-content', 'collapsed');
+            toggleBtn.onclick = () => {
+                const isCol = container.classList.toggle('collapsed');
+                container.style.maxHeight = isCol ? '280px' : (container.scrollHeight + 100) + 'px';
+                toggleBtn.querySelector('span').textContent = isCol ? '... Xem đầy đủ nội dung' : '[Thu gọn nội dung]';
+            };
+            container.style.transition = 'max-height 0.4s ease-in-out';
+
+            // Co dãn mượt mà nội dung phần giá trị di tích
+            const valueContainer = document.getElementById('value-container'), toggleValueBtn = document.getElementById('toggle-value-btn');
+            valueContainer.classList.add('description-content', 'collapsed');
+            toggleValueBtn.onclick = () => {
+                const isCol = valueContainer.classList.toggle('collapsed');
+                valueContainer.style.maxHeight = isCol ? '280px' : (valueContainer.scrollHeight + 100) + 'px';
+                toggleValueBtn.querySelector('span').textContent = isCol ? '... Xem đầy đủ nội dung' : '[Thu gọn nội dung]';
+            };
+            valueContainer.style.transition = 'max-height 0.4s ease-in-out';
+        });
+    </script>
+</body>
+</html>
